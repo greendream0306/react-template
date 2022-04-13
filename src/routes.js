@@ -2,6 +2,7 @@ import { Navigate, useRoutes } from 'react-router-dom';
 
 import LogoOnlyLayout from './layouts/LogoOnlyLayout';
 import NotFound from './pages/Page404';
+import Login from './pages/Login';
 
 export default function Router() {
     return useRoutes([
@@ -12,6 +13,7 @@ export default function Router() {
                 // { path: '/', element: <Navigate to="/dashboard/app" /> },
                 { path: '*', element: <Navigate to="/404" /> },
                 { path: '404', element: <NotFound /> },
+                { path: 'login', element: <Login /> },
             ],
         },
         { path: '*', element: <Navigate to="/404" replace /> },
